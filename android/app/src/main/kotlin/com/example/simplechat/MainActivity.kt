@@ -1,4 +1,4 @@
-package com.example.simplechat
+package com.reo.simplechat
 
 import io.flutter.embedding.android.FlutterActivity
 

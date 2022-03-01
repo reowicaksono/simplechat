@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "972969777129",
+    "project_id": "simplechat-reo",
+    "storage_bucket": "simplechat-reo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972969777129:android:e4e3ec3c1f2a96e3f45d78",
+        "android_client_info": {
+          "package_name": "com.reo.simplechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972969777129-g83bjt3460cu8fpo1ce9di7rnfnu66l1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reo.simplechat",
+            "certificate_hash": "e50d34ad396078f18beeb74133c0f705943b18f7"
+          }
+        },
+        {
+          "client_id": "972969777129-jlitn88c8mdj5eh837n09s9t7sc547a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEYhh3r9X487ozCsiuqfwk3I7R7Ai5Ox4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972969777129-jlitn88c8mdj5eh837n09s9t7sc547a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
