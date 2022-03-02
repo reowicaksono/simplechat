@@ -11,6 +11,8 @@ dependencies:
   firebase_core: 1.13.1
   google_sign_in: 5.2.4
   lottie: 1.2.2
+  google_fonts: 2.3.1
+  animate_do: 2.1.0
   flutter: 
     sdk: flutter
 
