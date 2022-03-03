@@ -14,9 +14,7 @@ class _IntroductionHelperState extends State<IntroductionHelper> {
 
   @override
   void initState() {
-    _pageController = PageController(
-      initialPage: 0
-    );
+    _pageController = PageController(initialPage: 0);
     super.initState();
   }
 
@@ -37,14 +35,16 @@ class _IntroductionHelperState extends State<IntroductionHelper> {
           Padding(
             padding: EdgeInsets.only(right: 20, top: 20),
             child: TextButton(
-              onPressed: (){
+              onPressed: () {
                 Get.offAllNamed(Routes.LOGIN);
               },
-              child: Text('Skip', style: TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w400
-              ),),
+              child: Text(
+                'Skip',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400),
+              ),
             ),
           )
         ],
@@ -61,21 +61,18 @@ class _IntroductionHelperState extends State<IntroductionHelper> {
             controller: _pageController,
             children: <Widget>[
               makePage(
-                lottie: 'assets/lottie/message.json',
-                title: 'Judul',
-                content: 'JASDSA'
-              ),
+                  lottie: 'assets/lottie/makefriends.json',
+                  title: 'Cari Teman',
+                  content: 'Anda dapat mencari teman dengan berdasarkan akun email yang telah terdaftar'),
               makePage(
-                reverse: true,
-                lottie: 'assets/lottie/notif.json',
-                title: 'Judul',
-                content: 'JASDSA'
-              ),
+                  reverse: true,
+                  lottie: 'assets/lottie/maintanance.json',
+                  title: 'Maintanance',
+                  content: 'Kami sering melakukan pembaruan sistem untuk meningkatkan kualitas aplikasi'),
               makePage(
-                lottie: 'assets/lottie/cloud.json',
-                title: 'Judul',
-                content: 'JASDSA'
-              ),
+                  lottie: 'assets/lottie/free.json',
+                  title: 'Gratis',
+                  content: 'Aplikasi ini dapat digunakan oleh siapa pun tanpa adanya pungutan biaya'),
             ],
           ),
           Container(
@@ -96,37 +93,47 @@ class _IntroductionHelperState extends State<IntroductionHelper> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          !reverse ? 
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Lottie.asset(lottie),
-              ),
-              SizedBox(height: 30,),
-            ],
-          ) : SizedBox(),
-          Text(title, style: TextStyle(
-            color: Colors.black,
-            fontSize: 30,
-            fontWeight: FontWeight.bold
-          ),),
-          SizedBox(height: 20,),
-          Text(content, textAlign: TextAlign.center, style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.w400
-          ),),
-          reverse ? 
-          Column(
-            children: <Widget>[
-              SizedBox(height: 30,),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Lottie.asset(lottie),
-              ),
-            ],
-          ) : SizedBox(),
+          !reverse
+              ? Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Container(
+                          width: 150, height: 150, child: Lottie.asset(lottie)),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                )
+              : SizedBox(),
+          Text(
+            title,
+            style: TextStyle(
+                color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            content,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.black, fontSize: 20, fontWeight: FontWeight.w400),
+          ),
+          reverse
+              ? Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Lottie.asset(lottie),
+                    ),
+                  ],
+                )
+              : SizedBox(),
         ],
       ),
     );
@@ -139,15 +146,13 @@ class _IntroductionHelperState extends State<IntroductionHelper> {
       width: isActive ? 30 : 6,
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(5)
-      ),
+          color: Colors.black, borderRadius: BorderRadius.circular(5)),
     );
   }
 
   List<Widget> _buildIndicator() {
     List<Widget> indicators = [];
-    for (int i = 0; i<3; i++) {
+    for (int i = 0; i < 3; i++) {
       if (currentIndex == i) {
         indicators.add(_indicator(true));
       } else {
