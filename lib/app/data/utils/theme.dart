@@ -11,11 +11,11 @@ double edge = 24;
 
 // Textstyle
 
-TextStyle BlackText = GoogleFonts.poppins(
+TextStyle BlackText = GoogleFonts.roboto(
   fontWeight: FontWeight.w500,
   color: WarnaHitam
 );
-TextStyle BlueText = GoogleFonts.poppins(
+TextStyle BlueText = GoogleFonts.roboto(
   fontWeight: FontWeight.w500,
   color: WarnaBiru
 );

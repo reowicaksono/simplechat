@@ -33,11 +33,12 @@ class MyApp extends StatelessWidget {
                     return GetMaterialApp(
                       debugShowCheckedModeBanner: false,
                       title: "Application",
-                      initialRoute: authController.isSkip.isTrue
-                          ? authController.isLogin.isTrue
-                              ? Routes.LOGIN
-                              : Routes.HOME
-                          : Routes.INTRODUCTION_SCREEN,
+                      initialRoute: Routes.HOME,
+                      // authController.isSkip.isTrue
+                      //     ? authController.isLogin.isTrue
+                      //         ? Routes.LOGIN
+                      //         : Routes.HOME
+                      //     : Routes.INTRODUCTION_SCREEN,
                       getPages: AppPages.routes,
                     );
                   }

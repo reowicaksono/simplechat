@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:simplechat/app/routes/app_pages.dart';
 import '../../../data/utils/theme.dart';
 import '../controllers/login_controller.dart';
 
@@ -31,7 +32,9 @@ class LoginView extends GetView<LoginController> {
                       shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       onSurface: Colors.red,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.offAllNamed(Routes.HOME);
+                    },
                     child: Row(
                       children: [
                         //Icon Button
